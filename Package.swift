@@ -24,16 +24,22 @@ let package = Package(
         .target(
             name: "glslang",
             dependencies: [],
-            path: "glslang",
-            exclude: ["CMakeLists.txt",
-                      "OSDependent/Windows",
-                      "OSDependent/Unix/CMakeLists.txt",
-                      "OSDependent/Web",
-                      "MachineIndependent/glslang.y",
-                      "MachineIndependent/glslang.m4",
-                      "ExtensionHeaders/GL_EXT_shader_realtime_clock.glsl",
-                      "updateGrammar"],
-            cxxSettings: [.headerSearchPath("../"), .define("ENABLE_HLSL", to: "1")])
+            path: ".",
+            exclude: ["glslang/CMakeLists.txt",
+                      "glslang/OSDependent/Windows",
+                      "glslang/OSDependent/Unix/CMakeLists.txt",
+                      "glslang/OSDependent/Web",
+                      "glslang/MachineIndependent/glslang.y",
+                      "glslang/MachineIndependent/glslang.m4",
+                      "glslang/ExtensionHeaders/GL_EXT_shader_realtime_clock.glsl",
+                      "glslang/updateGrammar",
+                      "Test",
+                      "gtests",
+                      "kokoro",
+                      "LICENSE.txt"],
+            sources: ["glslang", "SPIRV"],
+            publicHeadersPath: ".",
+            cxxSettings: [.define("ENABLE_HLSL", to: "1")])
     ],
     cxxLanguageStandard: .cxx14
 )
