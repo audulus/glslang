@@ -37,7 +37,7 @@ let package = Package(
                       "gtests",
                       "kokoro",
                       "LICENSE.txt"],
-            sources: ["glslang", "SPIRV"],
+            sources: ["glslang", "SPIRV", "OGLCompilersDLL"],
             publicHeadersPath: ".",
             cxxSettings: [.define("ENABLE_HLSL", to: "1")])
     ],
