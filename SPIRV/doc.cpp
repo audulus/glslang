@@ -1438,7 +1438,7 @@ const char* OpcodeString(int op)
 
 // The set of objects that hold all the instruction/operand
 // parameterization information.
-InstructionParameters InstructionDesc[OpCodeMask + 1];
+InstructionParameters InstructionDesc[OpLast];
 OperandParameters ExecutionModeOperands[ExecutionModeCeiling];
 OperandParameters DecorationOperands[DecorationCeiling];
 

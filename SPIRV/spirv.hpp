@@ -1705,6 +1705,7 @@ enum Op {
     OpTypeStructContinuedINTEL = 6090,
     OpConstantCompositeContinuedINTEL = 6091,
     OpSpecConstantCompositeContinuedINTEL = 6092,
+    OpLast,
     OpMax = 0x7fffffff,
 };
 
